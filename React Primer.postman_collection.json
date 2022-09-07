@@ -1,0 +1,380 @@
+{
+	"info": {
+		"_postman_id": "4994c46c-216a-42b2-8a8e-635393ad45c1",
+		"name": "React Primer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "3434479"
+	},
+	"item": [
+		{
+			"name": "API",
+			"item": [
+				{
+					"name": "User",
+					"item": [
+						{
+							"name": "security",
+							"item": [
+								{
+									"name": "Register",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"Test\",\r\n    \"password\": \"Test\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/user/register",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"user",
+												"register"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "Login",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"username\": \"Test\",\r\n    \"password\": \"Test\"\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "localhost:8080/user/login",
+											"host": [
+												"localhost"
+											],
+											"port": "8080",
+											"path": [
+												"user",
+												"login"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
+							"name": "Get All Users",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/user",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get User By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/user/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update User By Id",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"firstName\": \"Test\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/user/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Workout",
+					"item": [
+						{
+							"name": "Create Workout",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"exercises\": [1,2,3]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/workout",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"workout"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Workouts",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/workout",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"workout"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Workout By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/workout/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"workout",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Workout By Id",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"exercises\": [1,2,3,4,5]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/workout/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"workout",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Plan",
+					"item": [
+						{
+							"name": "Create Workout Plan",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\": {\r\n        \"id\": 1\r\n    },\r\n    \"goal\": \"CUTTING\",\r\n    \"splits\": \"THREE\",\r\n    \"workoutList\": [\r\n        {\r\n            \"id\": 1\r\n        }\r\n    ]\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/plan",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"plan"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Workout Plans",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/plan",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"plan"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Workout Plan By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/plan/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"plan",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Workout Plan By User Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/plan/user/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"plan",
+										"user",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Update Workout Plan By Id",
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"goal\": \"BULKING\",\r\n    \"splits\": \"FIVE\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/plan/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"plan",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}
