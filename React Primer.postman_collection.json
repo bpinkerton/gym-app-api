@@ -150,7 +150,7 @@
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\r\n    \"exercises\": [1,2,3]\r\n}",
+									"raw": "{\r\n    \"exercises\": [5, 17, 22, 30]\r\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -346,6 +346,95 @@
 									"port": "8080",
 									"path": [
 										"plan",
+										"1"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Log",
+					"item": [
+						{
+							"name": "Create Workout Log",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"user\": {\r\n        \"id\": 1\r\n    },\r\n    \"workout\": {\r\n        \"id\": 1\r\n    },\r\n    \"notes\": \"Test notes\",\r\n    \"completed\": true,\r\n    \"date\": \"2022-09-09\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/log",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"log"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Workout Logs",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/log",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"log"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get Workout Log By Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/log/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"log",
+										"1"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Get All Workout Logs By User Id",
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8080/log/user/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"log",
+										"user",
 										"1"
 									]
 								}
