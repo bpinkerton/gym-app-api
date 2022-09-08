@@ -11,7 +11,7 @@ http://gymappapi-env.eba-xyq67ruz.us-east-2.elasticbeanstalk.com/user
 GET <br>
 GET BY ID <br>
 POST <br>
-PATCH By ID <br>
+PATCH BY ID <br>
 
 ## Workout
 
