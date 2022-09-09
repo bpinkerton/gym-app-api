@@ -11,6 +11,7 @@ import org.hibernate.annotations.Cascade;
 import javax.persistence.*;
 import java.sql.Timestamp;
 import java.util.List;
+import java.util.Map;
 
 @Entity
 @Getter
@@ -36,9 +37,9 @@ public class WorkoutPlan {
     private Timestamp startDate;
     private Timestamp endDate;
 
-    @ManyToMany(cascade = CascadeType.MERGE, fetch = FetchType.LAZY)
+    @ManyToMany(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
     @JoinTable(name = "workout_plan_workouts", joinColumns = @JoinColumn(name="workout_plan_id"), inverseJoinColumns = @JoinColumn(name = "workout_id"))
-    private List<Workout> workoutList;
+    private Map<Integer, Workout> workoutList;
 
     public enum Goal{
         CUTTING, MAINTAINING, BULKING

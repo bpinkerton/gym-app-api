@@ -6,6 +6,7 @@ import lombok.Data;
 
 import java.sql.Timestamp;
 import java.util.List;
+import java.util.Map;
 
 @Data
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -16,5 +17,5 @@ public class WorkoutPlanDto {
     private WorkoutPlan.Splits splits;
     private Timestamp startDate;
     private Timestamp endDate;
-    private List<WorkoutDto> workoutList;
+    private Map<Integer, WorkoutDto> workoutList;
 }

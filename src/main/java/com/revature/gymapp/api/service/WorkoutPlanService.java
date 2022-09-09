@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import javax.transaction.Transactional;
 import java.util.List;
+import java.util.Map;
 
 @Service
 @Transactional
@@ -49,7 +50,7 @@ public class WorkoutPlanService {
         if(workoutPlanDto.getStartDate() != null) dbWorkoutPlan.setStartDate(workoutPlanDto.getStartDate());
         if(workoutPlanDto.getEndDate() != null) dbWorkoutPlan.setEndDate(workoutPlanDto.getEndDate());
         if(workoutPlanDto.getWorkoutList() != null) dbWorkoutPlan.setWorkoutList(
-                objectMapper.convertValue(workoutPlanDto.getWorkoutList(), new TypeReference<List<Workout>>() {}));
+                objectMapper.convertValue(workoutPlanDto.getWorkoutList(), new TypeReference<Map<Integer, Workout>>() {}));
         return objectMapper.convertValue(workoutPlanRepository.save(dbWorkoutPlan), WorkoutPlanDto.class);
     }
 }
