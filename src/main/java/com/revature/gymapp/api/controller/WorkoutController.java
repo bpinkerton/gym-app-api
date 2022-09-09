@@ -8,6 +8,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/workout")
+@CrossOrigin("*")
 public class WorkoutController {
 
     private final WorkoutService workoutService;
